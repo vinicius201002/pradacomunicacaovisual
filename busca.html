@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/essenciais.css">
+    <link rel="stylesheet" href="styles/busca.css">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800' rel='stylesheet'>
+  <script src="script/search.js"></script>
+  <script src="script/script.js"></script>
+    <title>Busca de produtos</title>
+</head>
+<body>
+  <div class="inputfixed">
+    <input id="ipt_pesquisa_mobile" type="text" placeholder="Procurar"><button onclick="buscarProdutos('mobile')"><i class="fas fa-search"></i></button>
+    </div>
+    <!-- Mobile -->
+    <div class="hamburger" id="hamburger">
+      <img src="img/LOGO SEM FUNDO.png">
+      <div class="bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+      <div class="container">
+        <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
+        <div class="searchbaritems">
+          <div class="searchbar">
+          <input id="ipt_pesquisa" type="text" placeholder="Procurar">
+          <button onclick="buscarProdutos()"><i class="fas fa-search"></i></button>
+        </div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre-nos.html">Sobre nós</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+          </ul>
+        </div>
+        <button onclick="abrirWhatsApp()" class="wpp-button"><i class="fab fa-whatsapp"></i> Chama no Whatsapp</button>
+      </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <ul class="options">
+          <li class="li_buscar"><input id="ipt_pesquisa_mobile" type="text" placeholder="Procurar"><button onclick="buscarProdutos('mobile')">Buscar</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre-nos.html">Sobre</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="404.html">Contato</a></li>
+          <li><a  onclick="abrirWhatsApp()">Chamar no Whatsapp</a></li>
+        </ul>
+      </div>
+      <div class="titulo" id="titulo"></div>
+      <div id="resultado" class="layout">
+        
+
+      </div>
+      <div class="orcamento">
+        <div class="infos">
+          <p class="titulo">DÚVIDAS OU ORÇAMENTO?</p>
+          <p class="entreemcontato">Entre em contato conosco através do</p>
+          <div class="buttons">
+            <button onclick="abrirWhatsApp()">Whatsapp</button>
+            <button onclick="ligar()">11 99923-5082</button>
+            <button onclick="abrirInstagram()">Instagram</button>
+          </div>
+        </div>
+        <img class="img-atendente" src="img/ATENDENTE-1.png" width="200" height="auto">
+      </div>
+      <footer>
+        <div class="logo">
+          <div class="redes-sociais">
+            <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
+            <div class="contato">
+              <i class="fa-solid fa-square-envelope"></i>
+              <p>Contato.pradacomunicacaovisual.com.br</p>
+            </div>
+            <div class="contato">
+              <i class="fa-solid fa-phone"></i>
+              <p>(11) 99923-5082</p>
+            </div>
+            <div class="contato">
+              <i class="fab fa-instagram instagram-icon"></i>
+              <p>@prada.comunicacaovisual</p>
+            </div>
+    
+          </div>
+          <div class="endereco">
+            <p>Rua Refinaria Materipe, 617 - São Paulo</p>
+            <p class="comochegar">Como chegar?</p>
+            <b>Horário de funcionamento:</b>
+            <p>Seg. à Sex. 9h às 18h</p>
+          </div>
+        </div>
+        <div class="info">
+          <p class="pequeno_titulo">Institucional</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre-nos.html">Sobre nós</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="404.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="info">
+          <p class="pequeno_titulo">Produtos</p>
+          <ul>
+            <li><a href="produtos/adesivo.html">Adesivo</a></li>
+            <li><a href="produtos/banner.html">Banner</a></li>
+            <li><a href="produtos/windbanner.html">Wind Banner</a></li>
+            <li><a href="produtos/totemmdf.html">Totem MDF</a></li>
+            <li><a href="produtos/placaadesivada.html">Placa PS</a></li>
+            <li><a href="produtos/painelpantografico.html">Painel Pantográfico</a></li>
+        </ul>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>Copyright © 2024 Todos os direitos reservados Prada Comunicação Visual</p>
+      </div>
+</body>
+</html>
+<script>
+  // Lista de produtos com links e imagens
+  var produtos = [
+      ["Banner", "/produtos/banner.html", "/img/produtos/bannerbastaoecorda.jfif"],
+      ["Faixa", "/produtos/faixa.html", "/img/produtos/faixalonamadeira.jpg"],
+      ["Rollup", "/produtos/rollup.html", "/img/produtos/rollup.webp"],
+      ["Wind Banner", "/produtos/windbanner.html", "/img/produtos/windbanner.jpeg"],
+      ["Adesivo com recorte", "/produtos/adesivo.html", "/img/produtos/adesivocomrecorte.jpg"],
+      ["Adesivo sem recorte", "/produtos/adesivosemrecorte.html", "/img/produtos/adesivosemrecorte.png"],
+      ["Placa adesivada", "/produtos/placaadesivada.html", "/img/produtos/placapsadesivada.png"],
+      ["Painel Pantográfico", "/produtos/painelpantografico.html", "/img/produtos/painelpantografico.webp"],
+      ["Totem MDF", "/produtos/totemmdf.html", "/img/produtos/totemmdf.jpg"],
+      ["Wobbler", "/produtos/wobbler.html", "/img/produtos/wobbler.jpg"],
+      ["Roleta", "/produtos/roleta.html", "/img/nophoto.jpg"],
+      ["Mobile", "/produtos/mobile.html", "/img/produtos/mobile.webp"]
+  ];
+
+  // Função para obter o valor de um parâmetro da URL
+  function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+  }
+
+  // Função para redirecionar para a página do produto
+  function redirectTo(link) {
+      window.location.href = link;
+  }
+
+  // Decodificando o parâmetro 'vetor'
+  const vetorEncoded = getQueryParam('vetor');
+
+  if (vetorEncoded) {
+      try {
+          // Decodificando e dividindo a string separada por vírgulas
+          const vetorString = decodeURIComponent(vetorEncoded);
+          const nomesProdutos = vetorString.split(',');
+
+          // Criando um mapeamento de nomes para links e imagens
+          const produtoMap = new Map(produtos.map(([nome, link, img]) => [nome, { link, img }]));
+
+          // Gerando a lista de cards
+          let titulo = `<h1>Produtos Encontrados para busca "${sessionStorage.getItem('produtopesquisado')}":</h1>`;
+          document.getElementById('titulo').innerHTML = titulo;
+          let output = '';
+          nomesProdutos.forEach(nome => {
+              const produto = produtoMap.get(nome); // Obtendo o objeto do produto correspondente
+              
+              if (produto) {
+                  output += `
+                      <div class="card">
+                          <img src="${produto.img}" alt="${nome}">
+                          <p>${nome}</p>
+                          <button onclick="redirectTo('${produto.link}')">Ver mais</button>
+                      </div>`;
+              } else {
+                  output += `<p>${nome} (link não encontrado)</p>`;
+              }
+          });
+          document.getElementById('resultado').innerHTML = output;
+      } catch (e) {
+          console.error('Erro ao decodificar o parâmetro vetor:', e);
+      }
+  } else {
+   let output = `<p>Nenhum produto encontrado para a pesquisa "${sessionStorage.getItem('produtopesquisado')}"</p><br>
+   <h2>Não encontrou seu produto?</h2><br>
+   <h2>Fale com um de nossos vendedores</h2><br>
+   <button onclick="abrirWhatsApp()" class="wpp-button2"><i class="fab fa-whatsapp"></i> Chama no Whatsapp</button><br>
+   Ou, <span class="vejatodos"><a href="produtos.html">veja todos os produtos</a></span>
+   `;
+   document.getElementById('titulo').innerHTML = output;
+  }
+</script>

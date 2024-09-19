@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+}
+
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+.produtos-container {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 16px;
+    justify-content: center;
+    /* Centraliza os cards horizontalmente */
+}
+
+/* animação scroll */
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  
+  .left {
+    transform: translateX(100%);
+  }
+  
+   
+  
+  .show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s;
+  }
+
+  .produtos-container .card {
+    cursor: pointer;
+    transition: all 1s;
+  }
+
+  .produtos-container .card:hover {
+    transform: translateY(-5%);
+    transition: all 1s;
+}
+
+.text h1 {
+    color: #FF8205;
+    text-align: center;
+}
+
+.text h1, h2, p {
+    padding: 1rem;
+}
+.text {
+    background-color: white;
+    width: 100vw;
+    padding: 4rem 4rem 0rem 4rem;
+}
+
+.card {
+    flex: 1 1 calc(25% - 32px);
+    /* Tamanho base para 4 cards por linha */
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    min-width: 200px;
+    /* Garante uma largura mínima para os cards */
+    max-width: 300px;
+    /* Limita a largura máxima dos cards */
+}
+
+.card button {
+    width: 16vw;
+    height: 5vh;
+    background-color: #FF8205;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Define uma altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.card p {
+    padding: 16px;
+    margin: 0;
+    background-color: #fafafa;
+    /* Cor de fundo para a área de texto */
+}
+
+/* Navbar */
+.container {
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    /* Alinhamento */
+    justify-content: space-around;
+    /* padding */
+    padding: 1rem;
+    overflow: hidden;
+    /* flex-wrap: wrap; */
+    margin: 0;
+}
+
+.container img {
+    max-width: 100%;
+    /* Garante que a imagem não exceda a largura do contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.searchbaritems {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    flex: 0.6;
+}
+
+.searchbaritems input {
+    height: 57px;
+    width: 50%;
+    border-radius: 4rem;
+    border: 2px solid #fff;
+    text-indent: 2rem;
+    
+}
+
+.container input[type="text"] {
+
+    width: 50%;
+    /* Faz o campo de entrada ocupar o máximo de espaço disponível */
+}
+
+.container ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 60%;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 24px;
+    overflow-y: hidden;
+}
+
+.searchbaritems li {
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
+.searchbaritems li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.wpp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    flex-grow: 0.1;
+    background-color: #00AA00;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0 16px;
+    cursor: pointer;
+    align-self: center;
+    width: 11rem;
+}
+
+.wpp-button i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 1.2rem; /* Ajusta o tamanho do ícone em relação ao texto */
+    line-height: 1; /* Garante que a altura da linha do ícone seja apropriada */
+}
+
+/* Menu móvel */
+.mobile-menu {
+    display: none;
+    background-color: #FF8205;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+  
+    .hamburger {
+        display: flex;
+    }
+  
+    .mobile-menu.active {
+        display: block;
+    }
+  
+    .textoprincipal p {
+      font-size: 2rem;
+    }
+
+    .card button {
+        margin: 1rem;
+        width: 50%;
+    }
+  }
+  
+
+.separacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3vh;
+    background-image: linear-gradient(to right, #FFC305, #FF8205);
+}
+
+.banner {
+    width: 100vw;
+    background-color: white;
+    /* background-image: url('../img/homepage.jpg'); */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+.produtos-container button {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+    margin-left: 2rem;
+  
+  }
+  
+  .redes-sociais {
+    font-family: 'Montserrat';
+  }
+  
+  .redes-sociais .contato {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  footer .info {
+    flex: 1;
+    /* flex-basis: 33%; */
+  }
+  
+  footer .logo {
+    flex: 1.50;
+    display: flex;
+    flex-direction: column;
+    flex: 1.50;
+    gap: 3rem;
+  
+  }
+  
+  .pequeno_titulo {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .info ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .info ul li {
+    font-family: 'Montserrat';
+    color: #666666;
+  }
+  
+  
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-image: linear-gradient(to right, #FFC305, #FF8205);
+  }
+  
+  .copyright p {
+    font-family: 'Montserrat';
+    font-size: 100%;
+    text-align: center;
+  }
+  
+  .quebra {
+    width: 100vw;
+    height: 5vh;
+    background-image: linear-gradient(to right, #FFC305, #FF8205);
+  }
+  
+  .comochegar {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(33.333% - 32px);
+        /* 33.333% da largura menos o espaçamento */
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex: 1 1 calc(50% - 32px);
+        /* 50% da largura menos o espaçamento */
+    }
+}
+
+@media (max-width: 768px) {
+    .separacao {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 calc(100% - 32px);
+        /* 100% da largura menos o espaçamento */
+    }
+}

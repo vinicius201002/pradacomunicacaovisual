@@ -1,0 +1,537 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+}
+
+
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+
+  
+
+  .hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  
+  .left {
+    transform: translateX(100%);
+  }
+  
+   
+  
+  .show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s;
+  }
+
+
+
+
+/* Seção dinamica */
+.main {
+    width: 100vw; /* Garantir que o contêiner principal ocupe a largura total */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff; /* Fundo branco para melhor contraste */
+}
+.main .titulo {
+    text-align: start;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-left: 9rem;
+    margin-top: 2rem;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #FF8205;
+}
+
+.ulitems {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+}
+
+.ulitems li {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ulitems li.selected {
+    font-weight: bold; /* Destaque no texto */
+}
+
+.selected {
+    font-weight: bolder;
+}
+
+.ulitems li {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.info-section {
+    display: flex; /* Usar flexbox para layout lado a lado */
+    justify-content: space-between; /* Espaçar os elementos igualmente */
+    align-items: center; /* Alinhar os itens verticalmente ao centro */
+    width: 100%; /* Ocupa toda a largura do contêiner pai */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    padding: 20px;
+    background: #fff; /* Fundo branco para melhor contraste */
+    border-radius: 5px;
+}
+
+.info-section .content {
+    display: flex; /* Usar flexbox para o conteúdo interno */
+    width: 100%; /* Garantir que o conteúdo ocupe toda a largura da seção */
+    margin: 4rem 8rem 8rem 8rem;
+    transition: all 1s;
+}
+
+.info-section .logo,
+.info-section .text {
+    flex: 1; /* Cada elemento ocupa espaço igual */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    font-family: 'Montserrat';
+    color: #444444;
+    font-size: 1.4rem;
+}
+
+.info-section .logo {
+    max-width: 54%; /* Garante que não ultrapasse 50% da largura */
+    margin-right: 10px; /* Espaçamento entre o logo e o texto */
+}
+
+.info-section .text {
+    max-width: 50%; /* Garante que não ultrapasse 50% da largura */
+}
+
+.info-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-section .text {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 60%;
+}
+
+.missaovisao {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+  text-align: justify;
+}
+
+@media (max-width: 696px) { 
+    .main .titulo {
+       margin-left: 2rem;
+    }
+
+    .info-section .content {
+        flex-direction: column;
+    }
+
+}
+
+/* Fim sessão dinamica */
+
+
+
+
+/* Sobre nós */
+.orcamento {
+    width: 100%;
+    height: 44vh;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow-y: hidden;
+    font-family: 'Montserrat';
+
+    /* Escondendo imagem */
+
+}
+
+@media (min-width: 1268px) {
+    .orcamento {
+      background-size: cover;
+    }
+  }
+
+.img-atendente {
+    display: none;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 49%;
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+.infos .titulo {
+    font-size: 3rem;
+    color: #FF8205;
+    font-weight: bold;
+}
+
+.infos .entreemcontato {
+    color: #fff;
+    font-weight: bold;
+}
+
+.buttons button {
+    width: 20vw;
+    height: 7vh;
+    background-color: #FF8205;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.produtos {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nossos-produtos {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    overflow-y: hidden;
+    border-bottom: 1px solid #FFC305;
+}
+
+#vermaisprodutos {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 2rem;
+    position: relative;
+    /* Necessário para o pseudo-elemento */
+    display: inline-block;
+    /* Garante que o pseudo-elemento se ajuste ao texto */
+    overflow: hidden;
+    /* Garante que o pseudo-elemento não ultrapasse o texto */
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+
+
+#vermaisprodutos::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    /* Define a espessura do sublinhado */
+    background-color: #FFC305;
+    /* Define a cor do sublinhado */
+    transform: scaleX(0);
+    /* Começa com o sublinhado invisível */
+    transform-origin: left;
+    /* Define a origem da transformação */
+    transition: transform 0.4s ease;
+    /* Faz a transição do efeito de fade */
+}
+
+#vermaisprodutos:hover::after {
+    transform: scaleX(1);
+    /* Expande o sublinhado para a largura total */
+}
+
+.items {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    overflow-y: hidden;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.items .card {
+    flex: 1 1 calc(33.333% - 10px);
+    /* Ajusta a largura dos itens para caber 3 por linha com um espaçamento de 10px */
+    box-sizing: border-box;
+    /* Inclui o padding e a borda no tamanho total do item */
+    cursor: pointer;
+}
+
+
+
+.card img {
+    width: 100%;
+    /* Faz com que a imagem ocupe toda a largura do card */
+    height: 90%;
+}
+
+.card p {
+    text-align: center;
+    color: #FF8205;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+
+
+.separacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3vh;
+    background-image: linear-gradient(to right, #FFC305, #FF8205);
+}
+
+.copyright p {
+    font-family: 'Montserrat';
+    font-size: 100%;
+    text-align: center;
+}
+
+.quebra {
+    width: 100vw;
+    height: 5vh;
+    background-image: linear-gradient(to right, #FFC305, #FF8205);
+}
+
+
+@media (max-width: 769px) {
+    .separacao {
+        display: none;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 900px) and (min-width: 696px) {
+
+    
+
+    .orcamento {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-size: cover;
+    }
+
+    .img-atendente {
+        display: block;
+    }
+
+    .orcamento img {
+        width: 75%;
+        height: auto;
+    }
+
+    .infos {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+
+
+    .orcamento .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+
+    .orcamento .buttons button {
+        flex-basis: 76%;
+    }
+
+    .orcamento .entreemcontato {
+        font-size: 4vw;
+    }
+}
+
+
+@media (max-width: 696px) {
+    footer {
+        font-size: 1.5rem;
+        flex-flow: column wrap;
+        gap: 2rem;
+    }
+
+    .items {
+        flex-direction: column;
+    }
+
+    .infos .titulo {
+        font-size: 2rem;
+    }
+
+    #vermaisprodutos {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 2rem;
+        /* position: relative; */
+        /* display: inline-block; */
+        overflow: hidden;
+        /* margin-top: 2rem; */
+        /* margin-bottom: 3rem; */
+        cursor: pointer;
+    }
+
+    .nossos-produtos {
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 2rem;
+        /* margin-top: 4rem; */
+        /* padding: 2rem; */
+        overflow-y: hidden;
+        border-bottom: 1px solid #FFC305;
+    }
+
+    .orcamento {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-size: cover;
+    }
+
+    .orcamento img {
+        width: auto;
+        height: auto;
+    }
+
+    .orcamento .infos {
+        margin-left: 1rem;
+    }
+
+    .infos .entreemcontato {
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .orcamento .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+
+    .orcamento .buttons button {
+        flex-basis: 76%;
+    }
+
+    .img-atendente {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Empilha verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .info-section .logo,
+    .info-section .text {
+        max-width: 100%; /* Ocupa toda a largura disponível em telas pequenas */
+        margin-right: 0; /* Remove o espaçamento entre logo e texto */
+        margin-bottom: 20px; /* Espaçamento abaixo do logo */
+    }
+
+    .info-section .text {
+        margin-bottom: 0; /* Remove o espaçamento abaixo do texto */
+    }
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+    }
+
+    .logo {
+        max-width: 100%;
+        height: auto;
+
+
+    }
+
+    .textoprincipal button {
+        width: 43vw;
+
+    }
+
+    .info-block button {
+        width: 40vw;
+    }
+
+    footer .logo {
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    footer .redes-sociais .contato p {
+        font-size: 13px;
+    }
+
+    .redes-sociais {
+        i {
+            display: none;
+        }
+
+        .redes-sociais .contato {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+    }
+
+    .container {
+        display: none;
+    }
+  
+    .hamburger {
+        display: flex;
+    }
+  
+    .mobile-menu.active {
+        display: block;
+    }
+
+}

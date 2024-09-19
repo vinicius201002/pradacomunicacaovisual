@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre nós</title>
+  <link rel="stylesheet" href="styles/sobre-nos.css">
+  <link rel="stylesheet" href="styles/essenciais.css">
+
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800' rel='stylesheet'>
+  <script src="script/search.js"></script>
+</head>
+
+<body>
+  <div class="inputfixed">
+    <input id="ipt_pesquisa_mobile" type="text" placeholder="Procurar"><button onclick="buscarProdutos('mobile')"><i class="fas fa-search"></i></button>
+    </div>
+  <div class="banner">
+    <!-- Mobile -->
+    <div class="hamburger" id="hamburger">
+      <img src="img/LOGO SEM FUNDO.png">
+      <div class="bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
+      <div class="searchbaritems">
+        <div class="searchbar">
+        <input id="ipt_pesquisa" type="text" placeholder="Procurar">
+        <button onclick="buscarProdutos()"><i class="fas fa-search"></i></button>
+      </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre-nos.html">Sobre nós</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+        </ul>
+      </div>
+      <button onclick="abrirWhatsApp()" class="wpp-button"><i class="fab fa-whatsapp"></i> Chama no Whatsapp</button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="options">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-nos.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="404.html">Contato</a></li>
+        <li><a onclick="abrirWhatsApp()">Chamar no Whatsapp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="separacao">
+  </div>
+
+
+  <section class="main">
+    <p class="titulo">Conheça a Prada Comunicação Visual</p>
+    <ul class="ulitems">
+      <li onclick="mostrarConteudo('sobreNos', this)">Sobre nós</li>
+      <li onclick="mostrarConteudo('missaoVisaoValores', this)">Missão, visão e valores</li>
+      <li onclick="mostrarConteudo('equipamentos', this)">Equipamentos</li>
+    </ul>
+
+    <section class="info-section hidden">
+
+    </section>
+
+
+  </section>
+
+  <div class="orcamento hidden">
+    <div class="infos">
+      <p class="titulo">DÚVIDAS OU ORÇAMENTO?</p>
+      <p class="entreemcontato">Entre em contato conosco através do</p>
+      <div class="buttons">
+        <button onclick="abrirWhatsApp()">Whatsapp</button>
+        <button onclick="ligar()">11 99923-5082</button>
+        <button onclick="abrirInstagram()">Instagram</button>
+      </div>
+    </div>
+    <img class="img-atendente" src="img/ATENDENTE-1.png" width="200" height="auto">
+  </div>
+  <footer>
+    <div class="logo">
+      <div class="redes-sociais">
+        <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
+        <div class="contato">
+          <i class="fa-solid fa-square-envelope"></i>
+          <p>Contato.pradacomunicacaovisual.com.br</p>
+        </div>
+        <div class="contato">
+          <i class="fa-solid fa-phone"></i>
+          <p>(11) 99923-5082</p>
+        </div>
+        <div class="contato">
+          <i class="fab fa-instagram instagram-icon"></i>
+          <p>@prada.comunicacaovisual</p>
+        </div>
+
+      </div>
+      <div class="endereco">
+        <p>Rua Refinaria Materipe, 617 - São Paulo</p>
+        <p class="comochegar">Como chegar?</p>
+        <b>Horário de funcionamento:</b>
+        <p>Seg. à Sex. 9h às 18h</p>
+      </div>
+    </div>
+    <div class="info">
+      <p class="pequeno_titulo">Institucional</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre-nos.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="404.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="info">
+      <p class="pequeno_titulo">Produtos</p>
+      <ul>
+        <li><a href="produtos/adesivo.html">Adesivo</a></li>
+        <li><a href="produtos/banner.html">Banner</a></li>
+        <li><a href="produtos/windbanner.html">Wind Banner</a></li>
+        <li><a href="produtos/totemmdf.html">Totem MDF</a></li>
+        <li><a href="produtos/placaadesivada.html">Placa PS</a></li>
+        <li><a href="produtos/painelpantografico.html">Painel Pantográfico</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="copyright">
+    <p>Copyright © 2024 Todos os direitos reservados Prada Comunicação Visual</p>
+  </div>
+</body>
+
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+});
+
+
+  // Seção dinamica
+  function mostrarConteudo(tipo, elementoClicado) {
+    // Atualiza o conteúdo da info-section
+    const infoSection = document.querySelector('.info-section');
+    let conteudo = '';
+
+    switch (tipo) {
+      case 'sobreNos':
+        conteudo = `
+                <div class="content">
+                    <div class="logo">
+                        <img src="img/LOGO SEM FUNDO.png" alt="Logo da Prada Comunicação Visual">
+                    </div>
+                    <div class="text">
+                        <p><b>PRADA Comunicação Visual</b> é a sua parceira criativa para soluções gráficas de alto impacto. 
+Nossa missão é valorizar cada projeto com qualidade e inovação. Oferecemos uma ampla gama de produtos para comunicação visual, sempre focados em destacar a essência da sua marca. 
+<br><br>
+Com a <b>PRADA</b>, você transforma suas ideias em resultados visuais que capturam a atenção e fazem a diferença.</p>
+                    </div>
+                </div>
+            `;
+        break;
+
+      case 'missaoVisaoValores':
+        conteudo = `
+                <div class="content">
+                    <p class="missaovisao">
+                      <b>Missão</b>: A PRADA Visual tem como objetivo proporcionar soluções criativas e de excelência para atender às demandas de impressão de nossos clientes. Utilizando tecnologia de ponta e contando com uma equipe extremamente qualificada, trabalhamos para oferecer serviços de impressão que não apenas atendam, mas superem as expectativas, agregando valor e promovendo o sucesso dos negócios de nossos clientes.
+<br><br>
+ <b>Visão</b>: Nossa visão é crescer significativamente no mercado de impressão digital, sendo reconhecidos pela excelência no atendimento às diversas demandas de nossos clientes. Buscamos expandir nossa atuação, aumentar nossa base de clientes e formar parcerias estratégicas que fortaleçam nossa presença no setor. Almejamos ser uma referência em qualidade, inovação e agilidade, proporcionando aos nossos clientes uma experiência diferenciada e resultados excepcionais.
+<br><br>
+ <b>Valores: </b><br> 
+ <b>Qualidade</b>: Comprometemo-nos a oferecer impressões digitais de altíssima qualidade, utilizando equipamentos de última geração e materiais de primeira linha. Buscamos a perfeição em cada detalhe, para garantir a satisfação total dos nossos clientes.
+<br><br>
+ <b>Inovação</b>: Estamos sempre atentos às tendências e avanços tecnológicos do mercado de impressão digital. Investimos continuamente em novas tecnologias e técnicas, a fim de oferecer soluções inovadoras que agreguem valor aos projetos dos nossos clientes.
+<br><br>
+ <b>Atendimento personalizado</b>: Valorizamos o relacionamento com nossos clientes e buscamos entendê-los profundamente. Por isso, oferecemos um atendimento personalizado, ouvindo suas necessidades e oferecendo soluções sob medida. Queremos ser parceiros de confiança, proporcionando uma experiência positiva em cada interação.
+<br><br>
+ <b>Sustentabilidade</b>: Preocupamo-nos com o meio ambiente e adotamos práticas sustentáveis em nossa empresa. Buscamos minimizar o impacto ambiental das nossas operações, utilizando insumos e materiais ecologicamente corretos, além de adotar processos produtivos mais eficientes e responsáveis.
+<br><br>
+ <b>Integridade</b>: Agimos com ética, transparência e honestidade em todas as nossas relações, tanto internas quanto externas. Mantemos a confidencialidade das informações dos nossos clientes e honramos os compromissos assumidos. Acreditamos que a integridade é fundamental para construir relações duradouras e confiáveis.
+                    </p>
+                </div>
+            `;
+        break;
+
+      case 'equipamentos':
+        conteudo = `
+                <div class="content">
+                    <p>Nosso portfólio de equipamentos inclui tecnologia de ponta para garantir resultados impressionantes em nossos projetos. Estamos equipados com impressoras de alta resolução, ferramentas de corte avançadas e muito mais para atender todas as suas necessidades de comunicação visual.</p>
+                </div>
+            `;
+        break;
+
+      default:
+        conteudo = '<div class="content"><p>Selecione uma opção para visualizar o conteúdo.</p></div>';
+    }
+
+    infoSection.innerHTML = conteudo;
+
+    // Adiciona a classe 'selected' ao item clicado e remove dos outros
+    const listaItems = document.querySelectorAll('.ulitems li');
+    listaItems.forEach(item => {
+      item.classList.remove('selected');
+    });
+    elementoClicado.classList.add('selected');
+  }
+
+  // Carregar o conteúdo inicial
+  mostrarConteudo('sobreNos', document.querySelector('.ulitems li'));
+
+  // Carregas a mesma logo para todas as páginas
+  document.addEventListener('DOMContentLoaded', function () {
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = '../img/icone.ico';
+    document.head.appendChild(link);
+  }
+  )
+
+    
+   // Animação no scroll
+   const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Para observar o elemento depois de já ter sido animado
+      myObserver.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove('show');
+      }
+    })
+  })
+
+  const elements = document.querySelectorAll('.hidden');
+  elements.forEach((element) => {
+    myObserver.observe(element)
+  })
+
+
+</script>
