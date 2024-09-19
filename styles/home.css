@@ -10,11 +10,27 @@ a {
   color: black;
 }
 
-
+/* Animação para aparecer o elemento */
 .hidden {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 1s;
+}
+
+.items-mobile {
+  display: none;
+}
+
+.items {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  overflow-y: hidden;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 
@@ -85,6 +101,30 @@ a {
     background-image: url('../img/Fundo-site-mobile-9.jpg');
     height: 70vh;
   }
+
+  .items-mobile .card {
+    width: 45%;
+    
+  }
+
+  .items-mobile
+  {
+    width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  overflow-y: hidden;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  }
+
+  .items {
+    display: none;
+  }
+
+ 
 
   .textoprincipal {
     width: 100%;
@@ -438,31 +478,19 @@ a {
   /* Expande o sublinhado para a largura total */
 }
 
-.items {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
-  overflow-y: hidden;
-  padding-top: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
 
-.items .card {
-  width: 50%;
+
+ .card {
+  width: 32%;
   /* Ajusta a largura dos itens para caber 3 por linha com um espaçamento de 10px */
   box-sizing: border-box;
   /* Inclui o padding e a borda no tamanho total do item */
   cursor: pointer;
-
-  
   transform: translateY(0);
   transition: all 1s;
 }
 
-.items .card:hover {
+ .card:hover {
     transform: translateY(-5%);
     transition: all 1s;
 }
