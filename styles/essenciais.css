@@ -45,10 +45,10 @@ button {
     height: auto;
 }
   
-  .hamburger .bar {
+  .searchbarmobile .bar {
     height: 3px;
     width: 25px;
-    background-color: white;
+    background-color: black;
     margin: 3px 0;
   }
   
@@ -176,6 +176,10 @@ button {
     line-height: 1; /* Garante que a altura da linha do ícone seja apropriada */
   }
 
+  .searchbarmobile {
+    display: none;
+  }
+
   /* responsividade menu */
 @media (max-width: 768px) {
     .container {
@@ -184,7 +188,33 @@ button {
   
     .hamburger {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .hamburger img {
+      width: 150px;
+    }
+
+    .searchbarmobile {
+      display: flex;
+      width: 100vw;
+      gap: 5px;
+      padding: 9px;
+    }
+
+    .searchbarmobile .wpp-button {
+      width: 50px;
+      height: 50px;
+    }
+
+    .textoprincipal {
+    position: absolute;
+    top: 50%;
+    }
+
+    .searchbarmobile .wpp-button i {
+      margin: 0;
     }
 
     .bars {
@@ -231,8 +261,8 @@ button {
 
     .inputfixed {
       display: flex;
-      width: 100%;
-      background-color:#fee77f; /* Cor de fundo para destacar o input */
+      width: 60%;
+      background-color:white; /* Cor de fundo para destacar o input */
       padding: 10px;
       box-sizing: border-box;
       z-index: 999;
