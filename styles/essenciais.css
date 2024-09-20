@@ -196,10 +196,13 @@ button {
 
     .hamburger img {
       width: 150px;
+      height: 90px;
+      align-self: end;
     }
 
     .searchbarmobile {
       display: flex;
+      justify-content: space-evenly;
       width: 100vw;
       gap: 5px;
       padding: 9px;
@@ -213,6 +216,7 @@ button {
     .textoprincipal {
     position: absolute;
     top: 50%;
+    gap: 2rem;
     }
 
     .searchbarmobile .wpp-button i {
@@ -268,11 +272,10 @@ button {
       padding: 10px;
       box-sizing: border-box;
       z-index: 999;
-      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5); /* Sombra externa */
-    }
+   }
   
     .inputfixed button {
-      width: 10%;
+      width: 20%;
       background-color: #FFC305;
       border-radius: 0 4rem 4rem 0; 
       border: none;
@@ -299,6 +302,11 @@ button {
     border-top: 1px solid #e5e5e5;
     margin-left: 2rem;
   
+  }
+
+  footer .infos2 {
+    display: flex;
+    gap: 1rem;
   }
   
   .redes-sociais {
@@ -402,7 +410,15 @@ button {
     }
     
     footer .redes-sociais .contato p {
-      font-size: 13px;
+      font-size: 15px;
+    }
+
+    footer .endereco p {
+      font-size: 15px;
+    }
+
+    .logo img {
+      align-self: center;
     }
     
     .redes-sociais {
