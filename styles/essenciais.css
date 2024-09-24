@@ -57,7 +57,7 @@ button {
     display: none;
     background-color: #FF8205;
     position: absolute;
-    top: 60px;
+    top: 21%;
     right: 0;
     width: 100%;
     text-align: center;
@@ -418,7 +418,7 @@ button {
     }
 
     .logo img {
-      align-self: center;
+      align-self: start;
     }
     
     .redes-sociais {

@@ -72,3 +72,209 @@ function solicitarOrcamento(produto) {
   elements.forEach((element) => {
     myObserver.observe(element)
   })
+
+  function updateFooter() {
+    const footer = document.getElementById('footer');
+    const isMobile = window.innerWidth > 768;
+
+    if (isMobile) {
+        footer.innerHTML = `
+            <div class="logo">
+                <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
+                <div class="redes-sociais">
+                    <div class="contato">
+                        <i class="fa-solid fa-square-envelope"></i>
+                        <p>Contato.pradacomunicacaovisual.com.br</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(11) 99923-5082</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                        <p>@prada.comunicacaovisual</p>
+                    </div>
+                </div>
+                <div class="endereco">
+                    <p>Rua Refinaria Materipe, 617 - São Paulo</p>
+                    <p class="comochegar">Como chegar?</p>
+                    <b>Horário de funcionamento:</b>
+                    <p>Seg. à Sex. 9h às 18h</p>
+                </div>
+            </div>
+            <div class="info">
+                <p class="pequeno_titulo">Institucional</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="404.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <p class="pequeno_titulo">Produtos</p>
+                <ul>
+                    <li><a href="produtos/adesivo.html">Adesivo</a></li>
+                    <li><a href="produtos/banner.html">Banner</a></li>
+                    <li><a href="produtos/windbanner.html">Wind Banner</a></li>
+                    <li><a href="produtos/totemmdf.html">Totem MDF</a></li>
+                    <li><a href="produtos/placaadesivada.html">Placa PS</a></li>
+                    <li><a href="produtos/painelpantografico.html">Painel Pantográfico</a></li>
+                </ul>
+            </div>`;
+    } else {
+        // O HTML original
+        footer.innerHTML = `
+            <div class="logo">
+                <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
+                <div class="redes-sociais">
+                    <div class="contato">
+                        <i class="fa-solid fa-square-envelope"></i>
+                        <p>Contato.pradacomunicacaovisual.com.br</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(11) 99923-5082</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                        <p>@prada.comunicacaovisual</p>
+                    </div>
+                </div>
+                <div class="endereco">
+                    <p>Rua Refinaria Materipe, 617 - São Paulo</p>
+                    <p class="comochegar">Como chegar?</p>
+                    <b>Horário de funcionamento:</b>
+                    <p>Seg. à Sex. 9h às 18h</p>
+                </div>
+            </div>
+            <div class="infos2">
+                <div class="info">
+                    <p class="pequeno_titulo">Institucional</p>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre-nos.html">Sobre nós</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="404.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p class="pequeno_titulo">Produtos</p>
+                    <ul>
+                        <li><a href="produtos/adesivo.html">Adesivo</a></li>
+                        <li><a href="produtos/banner.html">Banner</a></li>
+                        <li><a href="produtos/windbanner.html">Wind Banner</a></li>
+                        <li><a href="produtos/totemmdf.html">Totem MDF</a></li>
+                        <li><a href="produtos/placaadesivada.html">Placa PS</a></li>
+                        <li><a href="produtos/painelpantografico.html">Painel Pantográfico</a></li>
+                    </ul>
+                </div>
+            </div>`;
+    }
+}
+
+function updateFooterMobile() {
+    const footer = document.getElementById('footer-produtos');
+    const isMobile = window.innerWidth > 768;
+
+    if (isMobile) {
+        footer.innerHTML = `
+            <div class="logo">
+                <img src="../img/LOGO SEM FUNDO.png" width="243" height="123">
+                <div class="redes-sociais">
+                    <div class="contato">
+                        <i class="fa-solid fa-square-envelope"></i>
+                        <p>Contato.pradacomunicacaovisual.com.br</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(11) 99923-5082</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                        <p>@prada.comunicacaovisual</p>
+                    </div>
+                </div>
+                <div class="endereco">
+                    <p>Rua Refinaria Materipe, 617 - São Paulo</p>
+                    <p class="comochegar">Como chegar?</p>
+                    <b>Horário de funcionamento:</b>
+                    <p>Seg. à Sex. 9h às 18h</p>
+                </div>
+            </div>
+            <div class="info">
+                <p class="pequeno_titulo">Institucional</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="404.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <p class="pequeno_titulo">Produtos</p>
+                <ul>
+                    <li><a href="produtos/adesivo.html">Adesivo</a></li>
+                    <li><a href="produtos/banner.html">Banner</a></li>
+                    <li><a href="produtos/windbanner.html">Wind Banner</a></li>
+                    <li><a href="produtos/totemmdf.html">Totem MDF</a></li>
+                    <li><a href="produtos/placaadesivada.html">Placa PS</a></li>
+                    <li><a href="produtos/painelpantografico.html">Painel Pantográfico</a></li>
+                </ul>
+            </div>`;
+    } else {
+        // O HTML original
+        footer.innerHTML = `
+            <div class="logo">
+                <img src="../img/LOGO SEM FUNDO.png" width="243" height="123">
+                <div class="redes-sociais">
+                    <div class="contato">
+                        <i class="fa-solid fa-square-envelope"></i>
+                        <p>Contato.pradacomunicacaovisual.com.br</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>(11) 99923-5082</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                        <p>@prada.comunicacaovisual</p>
+                    </div>
+                </div>
+                <div class="endereco">
+                    <p>Rua Refinaria Materipe, 617 - São Paulo</p>
+                    <p class="comochegar">Como chegar?</p>
+                    <b>Horário de funcionamento:</b>
+                    <p>Seg. à Sex. 9h às 18h</p>
+                </div>
+            </div>
+            <div class="infos2">
+                <div class="info">
+                    <p class="pequeno_titulo">Institucional</p>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre-nos.html">Sobre nós</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="404.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <p class="pequeno_titulo">Produtos</p>
+                    <ul>
+                        <li><a href="produtos/adesivo.html">Adesivo</a></li>
+                        <li><a href="produtos/banner.html">Banner</a></li>
+                        <li><a href="produtos/windbanner.html">Wind Banner</a></li>
+                        <li><a href="produtos/totemmdf.html">Totem MDF</a></li>
+                        <li><a href="produtos/placaadesivada.html">Placa PS</a></li>
+                        <li><a href="produtos/painelpantografico.html">Painel Pantográfico</a></li>
+                    </ul>
+                </div>
+            </div>`;
+    }
+}
+
+// Chame a função inicialmente e sempre que a janela for redimensionada
+window.addEventListener('resize', updateFooter);
+window.addEventListener('resize', updateFooterMobile)
+updateFooterMobile();
+updateFooter();

@@ -16,43 +16,30 @@
     <title>Busca de produtos</title>
 </head>
 <body>
-  <div class="inputfixed">
-    <input id="ipt_pesquisa_mobile" type="text" placeholder="Procurar"><button onclick="buscarProdutos('mobile')"><i class="fas fa-search"></i></button>
+ <div class="hamburger" >
+    <img src="img/LOGO SEM FUNDO.png">
+  </div>
+  <div class="mobile-menu left" id="mobile-menu">
+    <ul class="options">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre-nos.html">Sobre</a></li>
+      <li><a href="produtos.html">Produtos</a></li>
+      <li><a href="404.html">Contato</a></li>
+      <li><a onclick="abrirWhatsApp()">Chamar no Whatsapp</a></li>
+    </ul>
+  </div>
+  <div class="searchbarmobile">
+   <div id="hamburger" class="bars">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
-    <!-- Mobile -->
-    <div class="hamburger" id="hamburger">
-      <img src="img/LOGO SEM FUNDO.png">
-      <div class="bars">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+    <div class="inputfixed">
+      <input id="ipt_pesquisa_mobile" type="text" placeholder="Procurar"><button onclick="buscarProdutos('mobile')"><i
+          class="fas fa-search"></i></button>
     </div>
-      <div class="container">
-        <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
-        <div class="searchbaritems">
-          <div class="searchbar">
-          <input id="ipt_pesquisa" type="text" placeholder="Procurar">
-          <button onclick="buscarProdutos()"><i class="fas fa-search"></i></button>
-        </div>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre-nos.html">Sobre nós</a></li>
-            <li><a href="produtos.html">Produtos</a></li>
-          </ul>
-        </div>
-        <button onclick="abrirWhatsApp()" class="wpp-button"><i class="fab fa-whatsapp"></i> Chama no Whatsapp</button>
-      </div>
-      <div class="mobile-menu" id="mobile-menu">
-        <ul class="options">
-          <li class="li_buscar"><input id="ipt_pesquisa_mobile" type="text" placeholder="Procurar"><button onclick="buscarProdutos('mobile')">Buscar</button></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sobre-nos.html">Sobre</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="404.html">Contato</a></li>
-          <li><a  onclick="abrirWhatsApp()">Chamar no Whatsapp</a></li>
-        </ul>
-      </div>
+    <button class="wpp-button" onclick="abrirWhatsApp()"><i class="fab fa-whatsapp"></i></button>
+  </div>
       <div class="titulo" id="titulo"></div>
       <div id="resultado" class="layout">
         
@@ -70,7 +57,7 @@
         </div>
         <img class="img-atendente" src="img/ATENDENTE-1.png" width="200" height="auto">
       </div>
-      <footer>
+      <footer id="footer">
         <div class="logo">
           <div class="redes-sociais">
             <img src="img/LOGO SEM FUNDO.png" width="243" height="123">
